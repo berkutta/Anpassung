@@ -7,16 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace hunkeler_aufgabe_2
+using helper;
+
+namespace Anpassung
 {
     public partial class Form1 : Form
     {
-        helper.Anpassung anpassung = new helper.Anpassung();
-        helper.Engineering engineering = new helper.Engineering();
-        helper.Engineering loadr = new helper.Engineering();
-        helper.Engineering loadi = new helper.Engineering();
-        helper.Engineering voltagek = new helper.Engineering();
-        helper.Engineering powerr = new helper.Engineering();
+        adjustment anpassung = new adjustment();
+        Engineering engineering = new Engineering();
+        Engineering loadr = new Engineering();
+        Engineering loadi = new Engineering();
+        Engineering voltagek = new Engineering();
+        Engineering powerr = new Engineering();
 
         public Form1()
         {

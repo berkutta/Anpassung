@@ -1,4 +1,4 @@
-﻿namespace hunkeler_aufgabe_2
+﻿namespace Anpassung
 {
     partial class Form1
     {

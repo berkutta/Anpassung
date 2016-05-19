@@ -5,7 +5,7 @@ using System.Text;
 
 namespace helper
 {
-    class Anpassung
+    class adjustment
     {
         double uq, ri, rl, deltaR;
         int value, numbers;
