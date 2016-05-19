@@ -13,6 +13,10 @@ namespace hunkeler_aufgabe_2
     {
         Anpassung anpassung = new Anpassung();
         Engineering engineering = new Engineering();
+        Engineering loadr = new Engineering();
+        Engineering loadi = new Engineering();
+        Engineering voltagek = new Engineering();
+        Engineering powerr = new Engineering();
 
         public Form1()
         {
@@ -33,25 +37,31 @@ namespace hunkeler_aufgabe_2
                     dataGridView1.Rows.RemoveAt(0);
                 }
 
-                
-                anpassung.setUq(Convert.ToDouble(textBox1.Text));
+                engineering.setEngineering(textBox1.Text);
+                anpassung.setUq(engineering.getValue());
 
                 engineering.setEngineering(textBox2.Text);
                 anpassung.setRi(engineering.getValue());
 
                 engineering.setEngineering(textBox3.Text);
                 anpassung.setDeltaR(engineering.getValue());
-                
+
                 anpassung.setNumbers(Convert.ToInt32(textBox4.Text));
 
 
                 for (int y = 0; y <= anpassung.getNumbers(); y++)
                 {
                     anpassung.setValue(y);
-                    dataGridView1.Rows.Add( anpassung.getRl().ToString("0.00"),
-                                            anpassung.getIl().ToString("0.00"),
-                                            anpassung.getUk().ToString("0.00"),
-                                            anpassung.getPl().ToString("0.00") );
+
+                    loadr.setValue(anpassung.getRl());
+                    loadi.setValue(anpassung.getIl());
+                    voltagek.setValue(anpassung.getUk());
+                    powerr.setValue(anpassung.getPl());
+
+                    dataGridView1.Rows.Add( loadr.getEngineering(),
+                                            loadi.getEngineering(),
+                                            voltagek.getEngineering(),
+                                            powerr.getEngineering() );
                 }
             }
             catch (Exception)
@@ -188,56 +198,63 @@ namespace hunkeler_aufgabe_2
             string buffer;
             double number_buffer;
 
-            if ((this.value > Math.Pow(10, -15)) && (this.value < Math.Pow(10, -12)))
+            if ((this.value >= Math.Pow(10, -15)) && (this.value < Math.Pow(10, -12)))
             {
                 number_buffer = this.value / Math.Pow(10, -15);
                 buffer = number_buffer.ToString("0.00");
 
                 return buffer + "f";
             }
-            else if ((this.value > Math.Pow(10, -12)) && (this.value < Math.Pow(10, -9)))
+            else if ((this.value >= Math.Pow(10, -12)) && (this.value < Math.Pow(10, -9)))
             {
                 number_buffer = this.value / Math.Pow(10, -12);
                 buffer = number_buffer.ToString("0.00");
 
                 return buffer + "p";
             }
-            else if ((this.value > Math.Pow(10, -9)) && (this.value < Math.Pow(10, -6)))
+            else if ((this.value >= Math.Pow(10, -9)) && (this.value < Math.Pow(10, -6)))
             {
                 number_buffer = this.value / Math.Pow(10, -9);
                 buffer = number_buffer.ToString("0.00");
 
                 return buffer + "n";
             }
-            else if ((this.value > Math.Pow(10, -6)) && (this.value < Math.Pow(10, -3)))
+            else if ((this.value >= Math.Pow(10, -6)) && (this.value < Math.Pow(10, -3)))
             {
                 number_buffer = this.value / Math.Pow(10, -6);
                 buffer = number_buffer.ToString("0.00");
 
                 return buffer + "u";
             }
-            else if ((this.value > Math.Pow(10, -3)) && (this.value < Math.Pow(10, 3)))
+            else if ((this.value >= Math.Pow(10, -3)) && (this.value < Math.Pow(10, 0)))
             {
                 number_buffer = this.value / Math.Pow(10, -3);
                 buffer = number_buffer.ToString("0.00");
 
                 return buffer + "m";
             }
-            else if ((this.value > Math.Pow(10, 3)) && (this.value < Math.Pow(10, 6)))
+            else if ((this.value >= Math.Pow(10, 0)) && (this.value < Math.Pow(10, 3)))
+            {
+                number_buffer = this.value;
+                buffer = number_buffer.ToString("0.00");
+
+                return buffer;
+            }
+            else if ((this.value >= Math.Pow(10, 3)) && (this.value < Math.Pow(10, 6)))
             {
                 number_buffer = this.value / Math.Pow(10, 3);
                 buffer = number_buffer.ToString("0.00");
 
                 return buffer + "k";
             }
-            else if ((this.value > Math.Pow(10, 6)) && (this.value < Math.Pow(10, 9)))
+            else if ((this.value >= Math.Pow(10, 6)) && (this.value < Math.Pow(10, 9)))
             {
                 number_buffer = this.value / Math.Pow(10, 6);
                 buffer = number_buffer.ToString("0.00");
 
                 return buffer + "M";
             }
-            else if ((this.value > Math.Pow(10, 9)) && (this.value < Math.Pow(10, 12)))
+            else if ((this.value >= Math.Pow(10, 9)) && (this.value < Math.Pow(10, 12)))
             {
                 number_buffer = this.value / Math.Pow(10, 9);
                 buffer = number_buffer.ToString("0.00");
@@ -245,7 +262,8 @@ namespace hunkeler_aufgabe_2
                 return buffer + "G";
             }
 
-            return "";
+            // In case of error return raw string value
+            return this.value.ToString("0.00");
         }
     }
 }
