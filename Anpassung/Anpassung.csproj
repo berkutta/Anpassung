@@ -8,8 +8,8 @@
     <ProjectGuid>{C40B5265-EE1C-4104-A0F1-2E7DC27A5DAC}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>hunkeler_aufgabe_10</RootNamespace>
-    <AssemblyName>hunkeler_aufgabe_10</AssemblyName>
+    <RootNamespace>Anpassung</RootNamespace>
+    <AssemblyName>Anpassung</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>

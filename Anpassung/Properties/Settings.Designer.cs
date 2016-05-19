@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace hunkeler_aufgabe_10.Properties {
+namespace Anpassung.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
