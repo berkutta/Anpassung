@@ -25,39 +25,33 @@ namespace hunkeler_aufgabe_2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            while (dataGridView1.Rows.Count > 1)
+            try
             {
-                dataGridView1.Rows.RemoveAt(0);
+                while (dataGridView1.Rows.Count > 1)
+                {
+                    dataGridView1.Rows.RemoveAt(0);
+                }
+
+                
+                anpassung.setUq(Convert.ToDouble(textBox1.Text));
+                anpassung.setRi(Convert.ToDouble(textBox2.Text));
+                anpassung.setDeltaR(Convert.ToInt32(textBox3.Text));
+                anpassung.setNumbers(Convert.ToInt32(textBox4.Text));
+
+
+                for (int y = 0; y <= anpassung.getNumbers(); y++)
+                {
+                    anpassung.setValue(y);
+                    dataGridView1.Rows.Add( anpassung.getRl().ToString("0.00"),
+                                            anpassung.getIl().ToString("0.00"),
+                                            anpassung.getUk().ToString("0.00"),
+                                            anpassung.getPl().ToString("0.00") );
+                }
             }
-
-            anpassung.setUq(Convert.ToDouble(textBox1.Text));
-            anpassung.setRi(Convert.ToDouble(textBox2.Text));
-            anpassung.setDeltaR(Convert.ToInt32(textBox3.Text));
-            anpassung.setNumbers(Convert.ToInt32(textBox4.Text));
-
-
-            for (int y = 1; y <= anpassung.getNumbers(); y++)
+            catch (Exception)
             {
-                anpassung.setValue(y);
-                dataGridView1.Rows.Add(Convert.ToString(anpassung.getRl()),
-                                        Convert.ToString(anpassung.getIl()),
-                                        Convert.ToString(anpassung.getUk()),
-                                        Convert.ToString(anpassung.getPl()));
+                MessageBox.Show("Es ist ein Fehler aufetreten!");
             }
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
         }
     }
 
@@ -108,7 +102,7 @@ namespace hunkeler_aufgabe_2
 
         public double getRl()
         {
-            return this.rl + (this.getValue() * this.deltaR);
+            return this.getValue() * this.deltaR;
         }
 
         public double getIl()

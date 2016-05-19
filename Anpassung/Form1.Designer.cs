@@ -188,7 +188,6 @@
             this.label8.Size = new System.Drawing.Size(38, 14);
             this.label8.TabIndex = 12;
             this.label8.Text = "count";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // textBox4
             // 
