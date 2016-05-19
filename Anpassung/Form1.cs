@@ -12,6 +12,7 @@ namespace hunkeler_aufgabe_2
     public partial class Form1 : Form
     {
         Anpassung anpassung = new Anpassung();
+        Engineering engineering = new Engineering();
 
         public Form1()
         {
@@ -34,8 +35,13 @@ namespace hunkeler_aufgabe_2
 
                 
                 anpassung.setUq(Convert.ToDouble(textBox1.Text));
-                anpassung.setRi(Convert.ToDouble(textBox2.Text));
-                anpassung.setDeltaR(Convert.ToInt32(textBox3.Text));
+
+                engineering.setEngineering(textBox2.Text);
+                anpassung.setRi(engineering.getValue());
+
+                engineering.setEngineering(textBox3.Text);
+                anpassung.setDeltaR(engineering.getValue());
+                
                 anpassung.setNumbers(Convert.ToInt32(textBox4.Text));
 
 
@@ -57,8 +63,8 @@ namespace hunkeler_aufgabe_2
 
     class Anpassung
     {
-        double uq, ri, rl;
-        int deltaR, value, numbers;
+        double uq, ri, rl, deltaR;
+        int value, numbers;
 
         public void setUq(double uq)
         {
@@ -75,7 +81,7 @@ namespace hunkeler_aufgabe_2
             this.rl = rl;
         }
 
-        public void setDeltaR(int deltaR)
+        public void setDeltaR(double deltaR)
         {
             this.deltaR = deltaR;
         }
@@ -118,6 +124,58 @@ namespace hunkeler_aufgabe_2
         public double getPl()
         {
             return this.getUk() * this.getIl();
+        }
+    }
+
+    class Engineering
+    {
+        double value;
+
+        public void setEngineering(string engineering)
+        {
+            this.value = Convert.ToDouble(engineering.TrimEnd('f', 'p', 'n', 'u', 'µ', 'm', 'k', 'M', 'G'));
+
+            if (engineering.Contains('f'))
+            {
+                this.value = this.value * Math.Pow(10, -15);
+            }
+            else if (engineering.Contains('p'))
+            {
+                this.value = this.value * Math.Pow(10, -12);
+            }
+            else if (engineering.Contains('n'))
+            {
+                this.value = this.value * Math.Pow(10, -9);
+            }
+            else if (engineering.Contains('u'))
+            {
+                this.value = this.value * Math.Pow(10, -6);
+            }
+            else if (engineering.Contains('µ'))
+            {
+                this.value = this.value * Math.Pow(10, -6);
+            }
+            else if (engineering.Contains('m'))
+            {
+                this.value = this.value * Math.Pow(10, -3);
+            }
+            else if (engineering.Contains('k'))
+            {
+                this.value = this.value * Math.Pow(10, 3);
+            }
+            else if (engineering.Contains('M'))
+            {
+                this.value = this.value * Math.Pow(10, 6);
+            }
+            else if (engineering.Contains('G'))
+            {
+                this.value = this.value * Math.Pow(10, 9);
+            }
+        }
+
+        public double getValue()
+        {
+            return this.value;
         }
     }
 }
