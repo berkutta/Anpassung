@@ -1,9 +1,0 @@
-C:\Benjamin\anpassung\Anpassung\bin\Debug\Anpassung.exe
-C:\Benjamin\anpassung\Anpassung\bin\Debug\Anpassung.pdb
-C:\Benjamin\anpassung\Anpassung\obj\x86\Debug\Anpassung.csprojResolveAssemblyReference.cache
-C:\Benjamin\anpassung\Anpassung\obj\x86\Debug\Anpassung.Form1.resources
-C:\Benjamin\anpassung\Anpassung\obj\x86\Debug\Anpassung.Properties.Resources.resources
-C:\Benjamin\anpassung\Anpassung\obj\x86\Debug\Anpassung.csproj.GenerateResource.Cache
-C:\Benjamin\anpassung\Anpassung\obj\x86\Debug\Anpassung.exe
-C:\Benjamin\anpassung\Anpassung\obj\x86\Debug\Anpassung.pdb
-C:\Benjamin\anpassung\Anpassung\obj\x86\Debug\Anpassung.menu.resources
