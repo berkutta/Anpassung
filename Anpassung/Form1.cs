@@ -71,5 +71,10 @@ namespace Anpassung
                 MessageBox.Show("Es ist ein Eingabefehler aufetreten!");
             }
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

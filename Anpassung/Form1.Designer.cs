@@ -39,14 +39,14 @@
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.rl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.il = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.uk = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -150,10 +150,36 @@
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 10;
             this.dataGridView1.Size = new System.Drawing.Size(426, 272);
             this.dataGridView1.TabIndex = 10;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // rl
+            // 
+            this.rl.HeaderText = "RL";
+            this.rl.Name = "rl";
+            this.rl.ReadOnly = true;
+            // 
+            // il
+            // 
+            this.il.HeaderText = "IL";
+            this.il.Name = "il";
+            this.il.ReadOnly = true;
+            // 
+            // uk
+            // 
+            this.uk.HeaderText = "UK";
+            this.uk.Name = "uk";
+            this.uk.ReadOnly = true;
+            // 
+            // rp
+            // 
+            this.rp.HeaderText = "PR";
+            this.rp.Name = "rp";
+            this.rp.ReadOnly = true;
             // 
             // label8
             // 
@@ -191,30 +217,6 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(0, 13);
             this.label7.TabIndex = 14;
-            // 
-            // rl
-            // 
-            this.rl.HeaderText = "RL";
-            this.rl.Name = "rl";
-            this.rl.ReadOnly = true;
-            // 
-            // il
-            // 
-            this.il.HeaderText = "IL";
-            this.il.Name = "il";
-            this.il.ReadOnly = true;
-            // 
-            // uk
-            // 
-            this.uk.HeaderText = "UK";
-            this.uk.Name = "uk";
-            this.uk.ReadOnly = true;
-            // 
-            // rp
-            // 
-            this.rp.HeaderText = "PR";
-            this.rp.Name = "rp";
-            this.rp.ReadOnly = true;
             // 
             // Form1
             // 
@@ -256,7 +258,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label6;
@@ -265,6 +266,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn il;
         private System.Windows.Forms.DataGridViewTextBoxColumn uk;
         private System.Windows.Forms.DataGridViewTextBoxColumn rp;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 
