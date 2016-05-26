@@ -41,9 +41,10 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(93, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(217, 27);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(196, 117);
+            this.pictureBox1.Size = new System.Drawing.Size(457, 261);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -51,9 +52,10 @@
             // 
             // Anpassung
             // 
-            this.Anpassung.Location = new System.Drawing.Point(12, 12);
+            this.Anpassung.Location = new System.Drawing.Point(28, 27);
+            this.Anpassung.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.Anpassung.Name = "Anpassung";
-            this.Anpassung.Size = new System.Drawing.Size(75, 117);
+            this.Anpassung.Size = new System.Drawing.Size(175, 261);
             this.Anpassung.TabIndex = 2;
             this.Anpassung.Text = "Anpassung";
             this.Anpassung.UseVisualStyleBackColor = true;
@@ -61,9 +63,10 @@
             // 
             // leitung_verlust
             // 
-            this.leitung_verlust.Location = new System.Drawing.Point(12, 144);
+            this.leitung_verlust.Location = new System.Drawing.Point(28, 321);
+            this.leitung_verlust.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.leitung_verlust.Name = "leitung_verlust";
-            this.leitung_verlust.Size = new System.Drawing.Size(75, 117);
+            this.leitung_verlust.Size = new System.Drawing.Size(175, 261);
             this.leitung_verlust.TabIndex = 3;
             this.leitung_verlust.Text = "Leitung Verlust";
             this.leitung_verlust.UseVisualStyleBackColor = true;
@@ -73,9 +76,10 @@
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(93, 144);
+            this.pictureBox2.Location = new System.Drawing.Point(217, 321);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(196, 117);
+            this.pictureBox2.Size = new System.Drawing.Size(457, 261);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
@@ -83,16 +87,17 @@
             // 
             // menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(301, 274);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(702, 611);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.leitung_verlust);
             this.Controls.Add(this.Anpassung);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.Name = "menu";
             this.Text = "menu";
             this.Load += new System.EventHandler(this.menu_Load);
