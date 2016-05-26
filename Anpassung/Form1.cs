@@ -51,7 +51,7 @@ namespace Anpassung
                 anpassung.setNumbers(Convert.ToInt32(textBox4.Text));
 
 
-                for (int y = 0; y <= anpassung.getNumbers(); y++)
+                for (int y = 0; y <= anpassung.getNumbers() - 1; y++)
                 {
                     anpassung.setValue(y);
 

@@ -96,6 +96,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="verlust_leitung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="verlust_leitung.Designer.cs">
+      <DependentUpon>verlust_leitung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="verlust_leitung_class.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -112,6 +119,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="verlust_leitung.resx">
+      <DependentUpon>verlust_leitung.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

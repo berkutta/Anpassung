@@ -34,5 +34,19 @@ namespace Anpassung
 
             form1.Show();
         }
+
+        private void leitung_verlust_Click(object sender, EventArgs e)
+        {
+            verlust_leitung Leitung_verlust = new verlust_leitung();
+
+            Leitung_verlust.Show();
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+            verlust_leitung Leitung_verlust = new verlust_leitung();
+
+            Leitung_verlust.Show();
+        }
     }
 }
