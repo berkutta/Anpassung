@@ -58,10 +58,20 @@ namespace Anpassung
                 {
                     verlust_leitung_class.setValue(y);
 
-                    dataGridView1.Rows.Add( Convert.ToString(verlust_leitung_class.getI()),
-                                            Convert.ToString(verlust_leitung_class.getR()),
-                                            Convert.ToString(verlust_leitung_class.getPl()),
-                                            Convert.ToString(verlust_leitung_class.getUk())
+                    Engineering I = new Engineering();
+                    Engineering R = new Engineering();
+                    Engineering Pl = new Engineering();
+                    Engineering Uk = new Engineering();
+
+                    I.setValue(verlust_leitung_class.getI());
+                    R.setValue(verlust_leitung_class.getR());
+                    Pl.setValue(verlust_leitung_class.getPl());
+                    Uk.setValue(verlust_leitung_class.getUk());
+
+                    dataGridView1.Rows.Add( Convert.ToString(I.getEngineering()),
+                                            Convert.ToString(R.getEngineering()),
+                                            Convert.ToString(Pl.getEngineering()),
+                                            Convert.ToString(Uk.getEngineering())
                                             );
 
                     if (verlust_leitung_class.getUk() < 0.00)
