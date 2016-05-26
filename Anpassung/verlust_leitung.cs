@@ -84,7 +84,6 @@ namespace Anpassung
                         // Only run once, user don't need 1000 Error messages
                         if (error_flag == 0)
                         {
-
                             error_flag = 1;
                             MessageBox.Show("Es wurden irreguläre Eingaben getätigt, welche zu negativen Resultaten führten!");
                         }

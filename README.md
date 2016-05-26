@@ -8,3 +8,7 @@ Menu Screenshot:
 "Anpassung" Screenshot:
 
 ![screenshot](http://git.benjaminmarty.ch/berkutta/Anpassung/raw/master/anpassung_screenshot.png)
+
+"Verlust in einer Leitung" Screenshot:
+
+![screenshot](http://git.benjaminmarty.ch/berkutta/Anpassung/raw/master/verlust_screenshot.png)
