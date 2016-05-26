@@ -36,6 +36,8 @@ namespace Anpassung
 
         private void button1_Click(object sender, EventArgs e)
         {
+            int error_flag = 0;
+
             // Set error flag invisible
             label10.Visible = false;
             try
@@ -74,14 +76,18 @@ namespace Anpassung
                                             Convert.ToString(Uk.getEngineering())
                                             );
 
-                    if (verlust_leitung_class.getUk() < 0.00)
+                    if (verlust_leitung_class.getUk() < 0.00 && verlust_leitung_class.getPl() < 0.00)
                     {
                         dataGridView1.Rows[y].Cells[2].Style.BackColor = Color.Red;
-                    }
-
-                    if (verlust_leitung_class.getPl() < 0.00)
-                    {
                         dataGridView1.Rows[y].Cells[3].Style.BackColor = Color.Red;
+
+                        // Only run once, user don't need 1000 Error messages
+                        if (error_flag == 0)
+                        {
+
+                            error_flag = 1;
+                            MessageBox.Show("Es wurden irreguläre Eingaben getätigt, welche zu negativen Resultaten führten!");
+                        }
                     }
                 }
             }
