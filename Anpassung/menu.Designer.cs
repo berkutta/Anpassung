@@ -91,6 +91,7 @@
             this.Controls.Add(this.leitung_verlust);
             this.Controls.Add(this.Anpassung);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "menu";
             this.Text = "menu";
