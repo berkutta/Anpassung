@@ -63,6 +63,16 @@ namespace Anpassung
                                             Convert.ToString(verlust_leitung_class.getPl()),
                                             Convert.ToString(verlust_leitung_class.getUk())
                                             );
+
+                    if (verlust_leitung_class.getUk() < 0.00)
+                    {
+                        dataGridView1.Rows[y].Cells[2].Style.BackColor = Color.Red;
+                    }
+
+                    if (verlust_leitung_class.getPl() < 0.00)
+                    {
+                        dataGridView1.Rows[y].Cells[3].Style.BackColor = Color.Red;
+                    }
                 }
             }
             catch (Exception)
